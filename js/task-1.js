@@ -1,8 +1,17 @@
-function slugify(title) {
-    const slug = title.toLowerCase().replaceAll(' ', '-');
-    return slug;
-}
+// Метод, який ми розглядали на лекції по Розгалуженням та циклам
 
+// function slugify(title) {
+//     const slug = title.toLowerCase().replaceAll(' ', '-');
+//     return slug;
+// }
+
+// Метод по конспекту Масиви і функції
+
+function slugify(title) {
+    let slug = title.toLowerCase();
+    slug = slug.split(' ');
+    return slug.join('-');
+}
 console.log(slugify("Arrays for beginners")); // "arrays-for-beginners"
 console.log(slugify("English for developer")); // "english-for-developer"
 console.log(slugify("Ten secrets of JavaScript")); // "ten-secrets-of-javascript"
