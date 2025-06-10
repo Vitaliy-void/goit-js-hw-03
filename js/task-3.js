@@ -1,5 +1,16 @@
 function filterArray(numbers, value) {
     let trueArray = [];
     let i = 0;
-    for(i = 0; numbers[i] > value; )
+    for(i = 0; i < +numbers.length; i++) {
+        if (numbers[i] > value) {
+            trueArray.push(numbers[i]); 
+        }
+    }
+    return trueArray
 }
+
+console.log(filterArray([1, 2, 3, 4, 5], 3)); // [4, 5]
+console.log(filterArray([1, 2, 3, 4, 5], 4)); // [5]
+console.log(filterArray([1, 2, 3, 4, 5], 5)); // []
+console.log(filterArray([12, 24, 8, 41, 76], 38)); // [41, 76]
+console.log(filterArray([12, 24, 8, 41, 76], 20)); // [24, 41, 76]
